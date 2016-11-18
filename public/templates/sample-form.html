@@ -1,0 +1,111 @@
+<h2>Sample Form</h2>
+
+<div class="register">
+    <div class="btn-group">
+        <div class="btn btn-primary" ng-model="sampleFormController.btnGroup.left" uib-btn-checkbox>Left</div>
+
+        <div class="btn btn-primary" ng-model="sampleFormController.btnGroup.middle" uib-btn-checkbox>Middle</div>
+
+        <div class="btn btn-primary" ng-model="sampleFormController.btnGroup.right" uib-btn-checkbox>Right</div>
+    </div>
+
+    <ul>
+        <li ng-repeat="item in sampleFormController.btnGroup">
+            {{ item }}
+        </li>
+    </ul>
+</div>
+
+
+<div class="register">
+    <!-- Add a "novalidate" attribute to remove default html 5 validation. -->
+    <form class="form-horizontal" name="userRegister" ng-submit="sampleFormController.saveUser (userRegister)" novalidate>
+        <!-- Form validation info. -->
+        <div>
+            <div><strong>Valid:</strong> {{ userRegister.$valid }}</div>
+            <div><strong>InValid:</strong> {{ userRegister.$invalid }}</div>
+            <div><strong>Pristine:</strong> {{ userRegister.$pristine }}</div>
+            <div><strong>Dirty:</strong> {{ userRegister.$dirty }}</div>
+            <div><strong>Touched:</strong> {{ userRegister.$touched }}</div>
+        </div>
+
+        <!-- Full Name of User -->
+        <div class="form-group">
+            <label class="form-label">Full Name</label>
+
+            <input class="form-control" name="fullname" ng-model="sampleFormController.fullName" placeholder="Your Full Name" type="text" required ng-minlength="3" ng-maxlength="24" autocomplete="off">
+
+            <p ng-show="userRegister.fullname.$invalid">Please enter a valid full name.</p>
+        </div>
+
+        <!-- Username -->
+        <div class="form-group">
+            <label>Username</label>
+            <input class="form-control">
+
+            <p ng-show="userRegister.fullname.$invalid">Please enter a valid username.</p>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+            <label>Password</label>
+            <input class="form-control">
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label>Email</label>
+
+            <input class="form-control" name="email" ng-model="sampleFormController.email" placeholder="Please enter an email address" type="email">
+
+            <p ng-show="userRegister.email.$invalid">Please enter a valid email address.</p>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sandbox">
+    <div class="btn-group">
+        <button class="btn">Button 1</button>
+        <button class="btn">Button 2</button>
+        <button class="btn">Button 3</button>
+    </div>
+
+    <button class="btn btn-primary">Button</button>
+    <button class="btn">Button</button>
+    <button class="btn">Button</button>
+
+
+    <form>
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <button type="submit" class="btn btn-default"><i class="fa fa-money" aria-hidden="true"></i>Submit</button>
+    </form>
+</div>

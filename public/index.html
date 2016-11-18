@@ -1,30 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Simple HTTP</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Simple HTTP</title>
 
-        <link href="/css/style.css" rel="stylesheet" type="text/css">
-    </head>
-    <body ng-app="App">
-        <h1>Simple HTTP</h1>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
 
-        <nav>
-            <a href="/#/">home</a>
-            <a href="/#/http">http</a>
-            <a href="/#/posts">posts</a>
-        </nav>
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"
 
-        <div ui-view></div>
+</head>
+<body ng-app="App">
+    <h1>Simple HTTP</h1>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Simple HTTP</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="/#/http">Http</a></li>
+                <li><a href="/#/posts">Posts</a></li>
+                <li><a href="/#/sample-form">Sample Form</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <!-- Load all my app scripts -->
-        <script src="/lib/angular/angular.js"></script>
-        <script src="/lib/angular-ui-router/release/angular-ui-router.js"></script>
 
-        <script src="/js/App.js"></script>
-        <script src="/js/HomeController.js"></script>
-        <script src="/js/HttpController.js"></script>
-        <script src="/js/PostController.js"></script>
-        <script src="/js/PostEditController.js"></script>
-    </body>
+
+
+    <!-- <nav>
+    <a href="/#/">home</a>
+    <a href="/#/http">http</a>
+    <a href="/#/posts">posts</a>
+    <a href="/#/sample-form">sample form</a>
+</nav> -->
+
+
+<div ui-view></div>
+
+<!-- Load all my app scripts -->
+<script src="/lib/angular/angular.js"></script>
+<script src="/lib/angular-ui-router/release/angular-ui-router.js"></script>
+
+<script src="/js/App.js"></script>
+<script src="/js/HomeController.js"></script>
+<script src="/js/HttpController.js"></script>
+<script src="/js/PostController.js"></script>
+<script src="/js/PostEditController.js"></script>
+<script src="/js/SampleFormController.js"></script>
+</body>
 </html>

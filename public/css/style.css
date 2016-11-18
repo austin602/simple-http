@@ -17,3 +17,24 @@ body {
 .post.edit input {
     display: inline-block;
 }
+
+.sandbox{
+    display:none
+}
+
+input.ng-invalid {
+    background-color: grey;
+}
+
+.form-group p {
+    color:red;
+    font-weight:bold;
+}
+
+.register {
+   border: 1px solid #cdcdcd ;
+   margin: auto;
+   margin-bottom: 40px;
+   max-width: 800px;
+   padding: 50px;
+}
